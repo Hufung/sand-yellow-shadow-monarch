@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Red Ink",
+      "hasCanvas": false,
+      "bodyTextLen": 850,
+      "bodyTextHash": "b5d2d538d49844d6e801406ea3430dcb37f050ab8eb19107f587cddbe30ce895",
+      "bodyTextPrefix": "Red Ink Desk Papers Atlas Common Errors trainer Mark the sentenc",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Red Ink",
+      "hasCanvas": false,
+      "bodyTextLen": 832,
+      "bodyTextHash": "b22072ee70ac367468c6fe93ee181017d5adae79432ba8d040ea13cb84821b17",
+      "bodyTextPrefix": "Red Ink Common Errors trainer Mark the sentence. Train the gramm",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

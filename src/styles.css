@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+
+  --color-background: #f3ebdc;
+  --color-foreground: #1c1712;
+  --color-card: #fbf6eb;
+  --color-card-foreground: #1c1712;
+  --color-popover: #fbf6eb;
+  --color-popover-foreground: #1c1712;
+  --color-primary: #b33a2b;
+  --color-primary-foreground: #fbf6eb;
+  --color-secondary: #e8dfd0;
+  --color-secondary-foreground: #1c1712;
+  --color-muted: #e7dcc8;
+  --color-muted-foreground: #6b6054;
+  --color-accent: #c45b4e;
+  --color-accent-foreground: #fbf6eb;
+  --color-destructive: #b33a2b;
+  --color-destructive-foreground: #fbf6eb;
+  --color-border: #d9ccb6;
+  --color-input: #d9ccb6;
+  --color-ring: #b33a2b;
+  --color-success: #2f5d45;
+  --color-success-foreground: #f3ebdc;
+  --color-rule: #c45b4e;
+  --color-ink-soft: #3a3229;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius: 12px;
+
+  --shadow-paper: 0 1px 0 rgb(28 23 18 / 0.04), 0 12px 32px -16px rgb(28 23 18 / 0.18);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .paper-sheet {
+    background-color: var(--color-card);
+    background-image:
+      linear-gradient(
+        90deg,
+        color-mix(in oklab, var(--color-rule) 55%, transparent),
+        color-mix(in oklab, var(--color-rule) 55%, transparent) 2px,
+        transparent 2px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 31px,
+        color-mix(in oklab, var(--color-rule) 14%, transparent) 31px,
+        color-mix(in oklab, var(--color-rule) 14%, transparent) 32px
+      );
+    background-size: 2px 100%, 100% 32px;
+    background-position: 28px 0, 0 12px;
+    background-repeat: no-repeat, repeat;
+  }
+
+  @media (min-width: 640px) {
+    .paper-sheet {
+      background-position: 44px 0, 0 12px;
+    }
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
